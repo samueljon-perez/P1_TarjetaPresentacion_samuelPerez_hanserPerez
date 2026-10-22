@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             P1_TarjetaPresentacion_samuelPerez_hanserPerezTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+                    Tarjeta(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
@@ -34,9 +35,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier.fillMaxSize()) {
-    Column {
-        Row {
+fun Tarjeta(name: String, modifier: Modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        Box(modifier = Modifier.fillMaxWidth()) {
             Box() {
                 Text(
                     text = "Hello $name!",
@@ -46,7 +47,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier.fillMaxSize()) {
             Box() { }
             Box() { }
         }
-        Row {
+        Box(modifier = Modifier.fillMaxWidth()) {
             Box() { }
             Box() { }
             Box() { }
@@ -56,8 +57,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier.fillMaxSize()) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun TarjetaPreview() {
     P1_TarjetaPresentacion_samuelPerez_hanserPerezTheme {
-        Greeting("Android")
+        Tarjeta("Android")
     }
 }
