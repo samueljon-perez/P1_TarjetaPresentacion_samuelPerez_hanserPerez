@@ -40,7 +40,7 @@ fun Tarjeta(name: String, modifier: Modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.fillMaxWidth()) {
             Box() {
                 Text(
-                    text = "Hola hanser!",
+                    text = "Hola samuel!",
                     modifier = modifier
                 )
             }
