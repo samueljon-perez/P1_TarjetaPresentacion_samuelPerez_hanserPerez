@@ -67,6 +67,8 @@ fun Tarjeta( modifier: Modifier = Modifier.fillMaxSize()) {
         }
 
     }
+
+    Column() { }
 }
 
 @Preview(showBackground = true)
